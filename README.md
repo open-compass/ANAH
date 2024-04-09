@@ -32,18 +32,10 @@ ANAH consists of ~12k sentence-level annotations for ~4.3k LLM responses coverin
 
 The ANAH dataset is available on Huggingface dataset hub.
 
-<div style="text-align: center;">
-  <table border="1" align="center">
-    <tr>
-      <th>Dataset</th>
-      <th>Huggingface Repo</th>
-    </tr>
-    <tr>
-      <td align="center">ANAH</td>
-      <td align="center"><a href="">Dataset Link</a></td>
-    </tr>
-  </table>
-</div>
+| Dataset | Huggingface Repo |
+|---------|------------------|
+| ANAH    | [Dataset Link](#) |
+
 
 
 
@@ -55,25 +47,11 @@ We have trained the annotators based on InternLM2 series models.
 
 The 7B & 20B annotator models are available on Huggingface & OpenXLab model hub.
 
-<div style="text-align: center;">
-  <table border="1" align="center">
-    <tr>
-      <th>Model</th>
-      <th>Huggingface Repo</th>
-      <th>OpenXLab Repo</th>
-    </tr>
-    <tr>
-      <td align="center">ANAH-7B</td>
-      <td align="center"><a href="">Model Link</a></td>
-      <td align="center"><a href="">Model Link</a></td>
-    </tr>
-    <tr>
-      <td align="center">ANAH-20B</td>
-      <td align="center"><a href="">Model Link</a></td>
-      <td align="center"><a href="">Model Link</a></td>
-    </tr>
-  </table>
-</div>
+| Model    | Huggingface Repo | OpenXLab Repo |
+|----------|------------------|---------------|
+| ANAH-7B  | [Model Link](#)  | [Model Link](#)  |
+| ANAH-20B | [Model Link](#)  | [Model Link](#)  |
+
 
 
 The models follow the conversation format of InternLM2-chat, with the template protocol as:
