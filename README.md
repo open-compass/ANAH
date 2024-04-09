@@ -12,7 +12,7 @@ This is the repo for our paper: [ANAH: Analytical Annotation of Hallucinations i
 ## ✨ Introduction
 
 
-ANAH is a bilingual dataset that offers ANalytical Annotation of Hallucinations in LLMs within Generative Question Answering.
+ANAH is a bilingual dataset that offers analytical annotation of hallucinations in LLMs within generative question answering.
 
 Each answer sentence in our dataset undergoes rigorous annotation, involving the retrieval of a reference fragment, the judgment of the hallucination type, and the correction of hallucinated content.
 
