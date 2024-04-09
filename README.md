@@ -79,6 +79,8 @@ pip install -r requirements.txt
 
 We now support the evaluation of the InternLM2, Llama2, Qwen, and Baichuan2 series of open-source models.
 
+We use LMdeploy for model deployment and inference. If you want to test more models, you can refer to [LMDeploy](https://github.com/InternLM/lagent) for relevant configuration.
+
 We recommend you download the huggingface model to your local path and replace the `{your_hf_model_path}` to that path.
 
 Our evaluations are conducted on NVIDIA A100 GPUs, and OOM may occur on other types of machines.
