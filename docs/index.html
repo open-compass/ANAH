@@ -1,0 +1,572 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<!---
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+--->
+
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+
+.move-down {
+    margin-top:1.2cm;
+}
+
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 17px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 17px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 13   px;
+    padding: 4px;
+}
+
+.affiliations-new {
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.flex-row-center {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 0 0 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.center {
+  margin-left: 10.0%;
+  margin-right: 10.0%;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #E0F7FA;
+  color: #01579B !important;
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.paper-btn-tapestry {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.column10 {
+  text-align: center;
+  float: left;
+  width: 10%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+.row-center {
+    margin: 16px 0px 16px 0px;
+    text-align: center;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+
+<script type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title> ANAH </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link rel="icon" href = "https://cdn-icons-png.flaticon.com/256/8114/8114241.png">
+    </head>
+
+ <body>
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        ANAH: Analytical Annotation of Hallucinations in Large Language Models
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://ziweiji.github.io/">Ziwei Ji<sup>1†</sup></a>,
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=NaiWQ5oAAAAJ/">Yuzhe Gu<sup>2†</sup>,
+                <a href="https://zhangwenwei.cn/">Wenwei Zhang<sup>2*</sup></a>,
+                <br>
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=kV3WvXcAAAAJ/">Chengqi Lyu<sup>2</sup>,
+                <a href="http://dahua.site/">Dahua Lin<sup>2</sup></a>,
+                <a href="https://chenkai.site/">Kai Chen<sup>2*</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> Hong Kong University of Science and Technology </span>
+            <span><sup>2</sup> Shanghai AI Laboratory</span>
+        </div>
+
+        <!-- <div class="affil-row">
+            <div class="venue text-center"><b>NeurlIPS 2023 </b></div>
+        </div> -->
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <a class="paper-btn" href="https://github.com/open-compass/ANAH">
+                <span class="material-icons"> code </span>
+                Code
+            </a>
+            <a class="paper-btn" href="https://huggingface.co/datasets/opencompass/anah">
+                <span class="material-icons"> folder_open </span> 
+                Data
+            </a>
+            <a class="paper-btn" href="https://huggingface.co/opencompass/anah-7b">
+                <span class="material-icons"> line_weight </span> 
+                Models
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="abstract"/>
+        <h2 style="text-align: center;">Abstract</h2>
+        <div class="flex-row" style="width: 85%; margin: 0 auto;">
+            <p>
+                Reducing the <i>hallucination</i> problem of Large Language Models (LLMs) is crucial for their wide applications. 
+                A comprehensive and fine-grained measurement of the hallucination is the first key step for the governance of this issue but is under-explored in the community.
+                Thus, we present <b>ANAH</b>, a bilingual dataset that offers <b>AN</b>alytical <b>A</b>nnotation of <b>H</b>allucinations in LLMs within Generative Question Answering.
+                Each answer sentence in our dataset undergoes rigorous annotation, involving the retrieval of a reference fragment, the judgment of the hallucination type, and the correction of hallucinated content. 
+                <b>ANAH</b> consists of ~12k sentence-level annotations for ~4.3k LLM responses covering over 700 topics, constructed by a human-in-the-loop pipeline.
+                Thanks to the fine granularity of the hallucination annotations, we can quantitatively confirm that the hallucinations of LLMs progressively accumulate in the answer and use <b>ANAH</b> to train and evaluate hallucination annotators. We conduct extensive experiments on studying generative and discriminative annotators and show that, although current open-source LLMs have difficulties in fine-grained hallucination annotation, the generative annotator trained with <b>ANAH</b> can surpass all open-source LLMs and GPT-3.5, obtain performance competitive with GPT-4, and exhibits better generalization ability on unseen questions.
+            </p>
+        </div>
+    </section>
+
+    <section id="case study"/>
+        <h2 style="text-align: center;">Case Study</h2>
+        <div class="flex-row" style="width: 85%; margin: 0 auto;">
+            <p>
+                An example of <b>ANAH</b> for sentence-level hallucination annotation. Each sentence in a generated answer is annotated in fine-grained with Reference Fragment, Hallucination Type, and Correction. The hallucinated and supported content are highlighted in orange and blue.
+            </p>
+            <figure>
+                <a>
+                <center>
+                    <img width="60%" src="figure/teaser.jpg"> 
+                </center>
+                </a>
+            </figure>
+        </div>
+    </section>
+
+    <section id="data-construction-pipeline">
+        <h2 style="text-align: center; margin-bottom: 10px;">Data Construction Pipeline</h2>
+        <div class="flex-row" style="width: 85%; margin: 0 auto;">
+            <p style="margin-bottom: 5px;">
+                <b>ANAH</b>'s establishment contains four stages:
+            </p>
+            <div class="inline-block" style="margin-top: 0; margin-bottom: 5px;">
+                <ol style="margin: 5px;">
+                    <li style="margin-bottom: 5px;"><b>Topic Selection & Reference Retrieval: </b>selecting a broad range of topics to ensure comprehensiveness.</li>
+                    <li style="margin-bottom: 5px;"><b>Question Generation & Selection: </b>constructing related questions whose responses can be fully supported by reference.</li>
+                    <li style="margin-bottom: 5px;"><b>Answer Generation: </b>generating answers from LLMs under different models and scenarios.</li>
+                    <li style="margin-bottom: 5px;"><b>Fine-grained Hallucination Annotation: </b>fine-grained hallucination annotation for further analysis and mitigation.</li>
+                </ol>
+            </div>
+            <figure style="margin: 0;">
+                <a>
+                    <center>
+                    <img width="90%" src="figure/pipeline.jpg" style="margin-top: 5px;"> 
+                    </center>
+                </a>
+            </figure>
+        </div>
+    </section>    
+
+
+    <section id="reference"/>
+    <hr>
+    <h2 style="">Citation</h2>
+    <pre>
+<code>
+@article{ji2024ANAH,
+    title={ANAH: Analytical Annotation of Hallucinations in Large Language Models},
+    author={Ziwei Ji and Yuzhe Gu and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
+    booktitle={ACL},
+    year={2024}
+  }
+</code>
+    </pre>
+    </section>   
+
+</div>
+</body>
+</html>
