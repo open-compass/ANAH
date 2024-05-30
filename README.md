@@ -26,6 +26,8 @@ ANAH consists of ~12k sentence-level annotations for ~4.3k LLM responses coverin
 
 ## 🚀 What's New
 
+- **[2024.05.30]** Release the dataset, model and test code for ANAH. 🎉🎉🎉
+
 ## 🤗 HuggingFace Model & Dataset
 
 ### Dataset
@@ -34,7 +36,7 @@ The ANAH dataset is available on Huggingface dataset hub.
 
 | Dataset | Huggingface Repo |
 |---------|------------------|
-| ANAH    | [Dataset Link](#) |
+| ANAH    | [Dataset Link](https://huggingface.co/datasets/opencompass/anah) |
 
 
 
@@ -45,12 +47,12 @@ ANAH can be used for training hallucination annotators.
 
 We have trained the annotators based on InternLM2 series models.
 
-The 7B & 20B annotator models are available on Huggingface & OpenXLab model hub.
+The 7B & 20B annotator models are available on Huggingface model hub.
 
-| Model    | Huggingface Repo | OpenXLab Repo |
-|----------|------------------|---------------|
-| ANAH-7B  | [Model Link](#)  | [Model Link](#)  |
-| ANAH-20B | [Model Link](#)  | [Model Link](#)  |
+| Model    | Huggingface Repo |
+|----------|------------------|
+| ANAH-7B  | [Model Link](https://huggingface.co/opencompass/anah-7b)  |
+| ANAH-20B | [Model Link](https://huggingface.co/opencompass/anah-20b)  |
 
 
 
