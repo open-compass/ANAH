@@ -7,7 +7,7 @@ This is the repo for our paper: [ANAH: Analytical Annotation of Hallucinations i
 
 + The [data](#🤗-HuggingFace-Model-&-Dataset#Dataset) for training and evaluating the LLM which consists of ~12k sentence-level hallucination annotations.
 + The [model](#🤗-HuggingFace-Model-&-Dataset) for annotating the hallucination.
-+ The [code](#🏗️-Evaluation) for evaluating the LLM.
++ The [code](#🏗️-Evaluation) for evaluating the LLMs' ability to annotate hallucination.
 
 
 ## ✨ Introduction
@@ -109,8 +109,8 @@ If you find this project useful in your research, please consider citing:
 @article{ji2024ANAH,
   title={ANAH: Analytical Annotation of Hallucinations in Large Language Models},
   author={Ziwei Ji and Yuzhe Gu and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
-  journal={arXiv preprint arXiv:2405.20315},
-  year={2023}
+  booktitle={ACL},
+  year={2024}
 }
 ```
 
