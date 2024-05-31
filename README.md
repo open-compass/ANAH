@@ -1,5 +1,6 @@
 # ANAH: Analytical Annotation of Hallucinations in Large Language Models
 
+[![arXiv](https://img.shields.io/badge/arXiv-2312.14033-b31b1b.svg)](https://arxiv.org/abs/2405.20315)
 [![license](https://img.shields.io/github/license/InternLM/opencompass.svg)](./LICENSE)
 
 This is the repo for our paper: [ANAH: Analytical Annotation of Hallucinations in Large Language Models](). The repo contains:
@@ -26,6 +27,7 @@ ANAH consists of ~12k sentence-level annotations for ~4.3k LLM responses coverin
 
 ## 🚀 What's New
 
+- **[2024.05.31]** Paper available on [ArXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
 - **[2024.05.30]** Release the dataset, model and test code for ANAH. 🎉🎉🎉
 
 ## 🤗 HuggingFace Model & Dataset
@@ -104,7 +106,12 @@ ANAH is built with [InternLM](https://github.com/InternLM/InternLM) and [LMDeplo
 
 If you find this project useful in your research, please consider citing:
 ```
-
+@article{ji2024ANAH,
+  title={ANAH: Analytical Annotation of Hallucinations in Large Language Models},
+  author={Ziwei Ji and Yuzhe Gu and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
+  journal={arXiv preprint arXiv:2405.20315},
+  year={2023}
+}
 ```
 
 ## 💳 License
