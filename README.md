@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2312.14033-b31b1b.svg)](https://arxiv.org/abs/2405.20315)
 [![license](https://img.shields.io/github/license/InternLM/opencompass.svg)](./LICENSE)
 
-This is the repo for our paper: [ANAH: Analytical Annotation of Hallucinations in Large Language Models](). The repo contains:
+This is the repo for our paper: [ANAH: Analytical Annotation of Hallucinations in Large Language Models](https://arxiv.org/abs/2405.20315). The repo contains:
 
 + The [data](#🤗-HuggingFace-Model-&-Dataset#Dataset) for training and evaluating the LLM which consists of ~12k sentence-level hallucination annotations.
 + The [model](#🤗-HuggingFace-Model-&-Dataset) for annotating the hallucination.
