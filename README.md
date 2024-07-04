@@ -1,9 +1,8 @@
-# ANAH: Analytical Annotation of Hallucinations in Large Language Models
+# ANAH
 
 [![license](https://img.shields.io/github/license/InternLM/opencompass.svg)](./LICENSE)
 
-This is the repo for our ANAH series of papers, containing [ANAH: Analytical Annotation of Hallucinations in Large Language Models](https://arxiv.org/abs/2405.20315) and [ANAH-v2: Scaling Analytical Hallucination
-Annotation of Large Language Models](). 
+This is the repo for our ANAH series of papers, containing [ANAH: Analytical Annotation of Hallucinations in Large Language Models](https://arxiv.org/abs/2405.20315) and [ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models](). 
 
 The repo contains:
 

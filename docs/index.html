@@ -455,7 +455,7 @@ pre {
         <center>
             <div class="author-row-new">
                 <a href="https://ziweiji.github.io/">Ziwei Ji<sup>1,2*</sup></a>,
-                <a href="https://scholar.google.com/citations?hl=zh-CN&user=NaiWQ5oAAAAJ/">Yuzhe Gu<sup>1*</sup>,
+                <a href="https://liqu1d-g.github.io/yuzhegu.github.io/">Yuzhe Gu<sup>1*</sup>,
                 <a href="https://zhangwenwei.cn/">Wenwei Zhang<sup>1†</sup></a>,
                 <br>
                 <a href="https://scholar.google.com/citations?hl=zh-CN&user=kV3WvXcAAAAJ/">Chengqi Lyu<sup>1</sup>,
@@ -478,7 +478,7 @@ pre {
 
         <div style="clear: both">
             <div class="paper-btn-parent">
-            <a class="paper-btn" href="">
+            <a class="paper-btn" href="https://arxiv.org/abs/2405.20315">
                 <span class="material-icons"> description </span> 
                  Paper
             </a>
@@ -566,7 +566,109 @@ pre {
       }
 </code>
     </pre>
-    </section>   
+    </section>
+
+<div class="container">
+<div class="paper-title">
+<h1> 
+    ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models
+</div>
+
+<div id="authors">
+    <center>
+        <div class="author-row-new">
+            <a href="https://liqu1d-g.github.io/yuzhegu.github.io/">Yuzhe Gu<sup>1*</sup>,
+            <a href="https://ziweiji.github.io/">Ziwei Ji<sup>1,2*</sup></a>,
+            <a href="https://zhangwenwei.cn/">Wenwei Zhang<sup>1†</sup></a>,
+            <br>
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=kV3WvXcAAAAJ/">Chengqi Lyu<sup>1</sup>,
+            <a href="http://dahua.site/">Dahua Lin<sup>1,3</sup></a>,
+            <a href="https://chenkai.site/">Kai Chen<sup>1</sup></a>
+        </div>
+    </center>
+    <center>
+    <div class="affiliations">
+        <span><sup>1</sup> Shanghai AI Laboratory</span>
+        <span><sup>2</sup> Hong Kong University of Science and Technology </span><br>
+        <span><sup>3</sup> The Chinese University of Hong Kong</span>
+    </div>
+
+    <!-- <div class="affil-row">
+        <div class="venue text-center"><b>NeurlIPS 2023 </b></div>
+    </div> -->
+
+    </center>
+
+    <div style="clear: both">
+        <div class="paper-btn-parent">
+        <a class="paper-btn" href="">
+            <span class="material-icons"> description </span> 
+                Paper
+        </a>
+        <a class="paper-btn" href="https://github.com/open-compass/ANAH">
+            <span class="material-icons"> code </span>
+            Code
+        </a>
+        <a class="paper-btn" href="">
+            <span class="material-icons"> folder_open </span> 
+            Data
+        </a>
+        <a class="paper-btn" href="">
+            <span class="material-icons"> line_weight </span> 
+            Models
+        </a>
+        </div>
+    </div>
+</div>
+
+<section id="abstract"/>
+<h2 style="text-align: center;">Abstract</h2>
+<div class="flex-row" style="width: 85%; margin: 0 auto;">
+    <p>
+        Large language models (LLMs) exhibit hallucinations in long-form question-answering tasks across various domains and wide applications.
+        Current hallucination detection and mitigation datasets are limited in domains and sizes, which struggle to scale due to prohibitive labor costs and insufficient reliability of existing hallucination annotators.
+        To facilitate the scalable oversight of LLM hallucinations, this paper introduces an iterative self-training framework that simultaneously and progressively scales up the hallucination annotation dataset and improves the accuracy of the hallucination annotator.
+        Based on the Expectation Maximization (EM) algorithm, in each iteration, the framework first applies a hallucination annotation pipeline to annotate a scaled dataset and then trains a more accurate hallucination annotator on the dataset. 
+        This new hallucination annotator is adopted in the hallucination annotation pipeline used for the next iteration.
+        Extensive experimental results demonstrate that the finally obtained hallucination annotator with only 7B parameters surpasses the performance of GPT-4 and obtains new state-of-the-art hallucination detection results on HaluEval and HalluQA by zero-shot inference.
+        Such an annotator can not only evaluate the hallucination levels of various LLMs on the large-scale dataset but also help to mitigate the hallucination of LLMs generations, with the Natural Language Inference (NLI) metric increasing from 25% to 37% on HaluEval.
+    </p>
+</div>
+</section>
+
+<section id="data-construction-pipeline">
+<h2 style="text-align: center; margin-bottom: 10px;">Scable Framwork for Annotation</h2>
+<div class="flex-row" style="width: 85%; margin: 0 auto;">
+    <p style="margin-bottom: 5px;">
+        <b>ANAH-v2</b> is a scalable framework for the oversight of LLM hallucinations.
+
+        Through iterative self-training, we simultaneously and progressively scales up the hallucination annotation dataset and improves the accuracy of the hallucination annotator.
+        
+        The final dataset encompasses both over ∼3k topics, ∼196k model responses, and ∼822k annotated sentences, in English and Chinese.
+    </p>
+    <figure style="margin: 0;">
+        <a>
+            <center>
+            <img width="100%" src="figure/method.png" style="margin-top: 5px;"> 
+            </center>
+        </a>
+    </figure>
+</div>
+</section>    
+
+
+<section id="reference"/>
+    <hr>
+    <h2 style="">Citation</h2>
+    <pre>
+    <code>
+    @article{
+
+    }
+    </code>
+    </pre>
+</section>
+
 
 </div>
 </body>
