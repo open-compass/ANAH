@@ -13,9 +13,9 @@ The repo contains:
 
 ## 🚀 What's New
 
-- **[2024.07.05]** The paper of ANAH-v2 available on [ArXiv](). 🔥🔥🔥
-- **[2024.05.31]** The paper of ANAH available on [ArXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
-- **[2024.05.30]** Release the dataset, model and test code for ANAH. 🎉🎉🎉
+- **[2024.07.08]** ANAH-v2 available on [ArXiv](https://arxiv.org/abs/2407.04693). 🔥🔥🔥
+- **[2024.05.31]** ANAH available on [ArXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
+- **[2024.05.16]** ANAH has been accepted by the main conference of ACL 2024. 🎉🎉🎉
 
 
 ## ✨ Introduction
@@ -37,17 +37,17 @@ ANAH consists of ~12k sentence-level annotations for ~4.3k LLM responses coverin
 
 ### ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models
 
-[![arXiv](https://img.shields.io/badge/arXiv-2405.20315-b31b1b.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2407.04693-b31b1b.svg)](https://arxiv.org/abs/2407.04693)
 
 
 ANAH-v2 is a scalable framework for the oversight of LLM hallucinations.
 
-Through iterative self-training, we  simultaneously and progressively scales up the hallucination annotation dataset and improves the accuracy of the hallucination annotator.
+Through iterative self-training, we simultaneously and progressively scale up the hallucination annotation dataset and improve the accuracy of the hallucination annotator.
 
 The final dataset encompasses both over ∼3k topics, ∼196k model responses, and ∼822k annotated sentences, in English and Chinese.
 
 <p align="center">
-  <img src="docs/figure/teaser-v2.png" height="500">
+  <img src="docs/figure/teaser-v2.jpg" height="500">
 </p>
 
 
@@ -61,7 +61,7 @@ The ANAH dataset is available on Huggingface dataset hub.
 |---------|------------------|
 | ANAH    | [Dataset Link](https://huggingface.co/datasets/opencompass/anah) |
 
-The ANAH-v2 dataset will comming soon...
+The ANAH-v2 dataset will be coming soon...
 
 ### Model
 
@@ -85,7 +85,7 @@ dict(role='user', begin='<|im_start|>user\n', end='<|im_end|>\n'),
 dict(role='assistant', begin='<|im_start|>assistant\n', end='<|im_end|>\n'),
 ```
 
-The ANAH-v2 model will comming soon...
+The ANAH-v2 model will be coming soon...
 
 ## 🏗️ ️Evaluation
 
@@ -135,8 +135,11 @@ If you find this project useful in your research, please consider citing:
   year={2024}
 }
 
-@article{
-  
+@article{gu2024anahv2,
+  title={ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models},
+  author={Gu, Yuzhe and Ji, Ziwei and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
+  journal={arXiv preprint arXiv:2407.04693},
+  year={2024}
 }
 ```
 
