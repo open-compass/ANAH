@@ -13,8 +13,8 @@ The repo contains:
 
 ## 🚀 What's New
 
-- **[2024.07.08]** ANAH-v2 available on [ArXiv](https://arxiv.org/abs/2407.04693). 🔥🔥🔥
-- **[2024.05.31]** ANAH available on [ArXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
+- **[2024.07.08]** ANAH-v2 available on [arXiv](https://arxiv.org/abs/2407.04693). 🔥🔥🔥
+- **[2024.05.31]** ANAH available on [arXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
 - **[2024.05.16]** ANAH has been accepted by the main conference of ACL 2024. 🎉🎉🎉
 
 
