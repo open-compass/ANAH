@@ -61,8 +61,6 @@ The ANAH dataset is available on Huggingface dataset hub.
 |---------|------------------|
 | ANAH    | [Dataset Link](https://huggingface.co/datasets/opencompass/anah) |
 
-The ANAH-v2 dataset will be coming soon...
-
 ### Model
 
 ANAH can be used for training hallucination annotators. 
@@ -86,8 +84,6 @@ The models follow the conversation format of InternLM2-chat, with the template p
 dict(role='user', begin='<|im_start|>user\n', end='<|im_end|>\n'),
 dict(role='assistant', begin='<|im_start|>assistant\n', end='<|im_end|>\n'),
 ```
-
-The ANAH-v2 model will be coming soon...
 
 ## 🏗️ ️Evaluation
 
