@@ -69,14 +69,16 @@ ANAH can be used for training hallucination annotators.
 
 We have trained the annotators based on InternLM2 series models.
 
-The 7B & 20B annotator models are available on Huggingface model hub.
+The annotator models are available on Huggingface model hub.
 
 | Model    | Huggingface Repo |
 |----------|------------------|
 | ANAH-7B  | [Model Link](https://huggingface.co/opencompass/anah-7b)  |
 | ANAH-20B | [Model Link](https://huggingface.co/opencompass/anah-20b)  |
+| ANAH-v2  | [Model Link](https://huggingface.co/opencompass/anah-v2) |
 
 
+You have to follow the prompt in our paper to annotate the hallucination. Note that ANAH and ANAH-v2 use completely different prompts.
 
 The models follow the conversation format of InternLM2-chat, with the template protocol as:
 
@@ -135,7 +137,7 @@ If you find this project useful in your research, please consider citing:
   year={2024}
 }
 
-@article{gu2024anahv2,
+@article{gu2024anah,
   title={ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models},
   author={Gu, Yuzhe and Ji, Ziwei and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
   journal={arXiv preprint arXiv:2407.04693},
