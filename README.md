@@ -13,6 +13,7 @@ The repo contains:
 
 ## 🚀 What's New
 
+- **[2024.09.26]** ANAH-v2 has been accepted by the NeurIPS 2024. 🎉🎉🎉
 - **[2024.07.08]** ANAH-v2 available on [arXiv](https://arxiv.org/abs/2407.04693). 🔥🔥🔥
 - **[2024.05.31]** ANAH available on [arXiv](https://arxiv.org/abs/2405.20315). 🔥🔥🔥
 - **[2024.05.16]** ANAH has been accepted by the main conference of ACL 2024. 🎉🎉🎉
