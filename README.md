@@ -6,15 +6,15 @@ This is the repository for our ANAH series of papers, containing [ANAH: Analytic
 
 The repo contains:
 
-+ The [data](#huggingface-model--dataset) for training and evaluating the LLM which consists of sentence-level hallucination annotations.
-+ The [model](#huggingface-model--dataset) for annotating the hallucination.
++ The [data](#huggingface-dataset) for training and evaluating the LLM which consists of sentence-level hallucination annotations.
++ The [model](#huggingface-model) for annotating the hallucination.
 + The [code](#evaluation) for evaluating the LLMs' ability to annotate hallucination.
 
 
 ## 🚀 What's New
 - **[2024.09.26]** ANAH-v2 has been accepted by the NeurIPS 2024. 🎉🎉🎉
 - **[2024.07.12]** ANAH-v2 [Annotator](https://huggingface.co/opencompass/anah-v2) has been open-sourced. 🔥🔥🔥
-- **[2024.07.03]** ANAH [Annotator-7B](https://huggingface.co/opencompass/anah-7b)&[Annotator-20B](https://huggingface.co/opencompass/anah-20b) have been open-sourced.  🔥🔥🔥
+- **[2024.07.03]** ANAH [Annotator-7B](https://huggingface.co/opencompass/anah-7b) & [20B](https://huggingface.co/opencompass/anah-20b) have been open-sourced.  🔥🔥🔥
 - **[2024.05.16]** ANAH has been accepted by the main conference of ACL 2024. 🎉🎉🎉
 
 
@@ -50,9 +50,9 @@ The final dataset encompasses both over ∼3k topics, ∼196k model responses, a
   <img src="docs/figure/teaser-v2.jpg" height="500">
 </p>
 
-<a name="huggingface-model--dataset"></a>
-## 🤗 HuggingFace Model & Dataset
 
+## 🤗 HuggingFace Model & Dataset
+<a name="huggingface-dataset"></a>
 ### Dataset
 
 The ANAH dataset is available on Huggingface dataset hub.
@@ -60,9 +60,9 @@ The ANAH dataset is available on Huggingface dataset hub.
 | Dataset | Huggingface Repo |
 |---------|------------------|
 | ANAH    | [Dataset Link](https://huggingface.co/datasets/opencompass/anah) |
-|---------|------------------|
-| ANAH-v2   | [Will Open Source] |
+| ANAH-v2 | [Will Open Source] |
 
+<a name="huggingface-model"></a>
 ### Model
 
 ANAH can be used for training hallucination annotators. 
