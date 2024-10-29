@@ -80,6 +80,8 @@ The annotator models are available on Huggingface model hub.
 
 You have to follow the prompt in our paper to annotate the hallucination. Note that ANAH and ANAH-v2 use completely different prompts.
 
+We recommand you to use the more advanced annotator ANAH-v2 and its prompt can be found [here](https://github.com/open-compass/ANAH/blob/main/prompt_v2.py).
+
 The models follow the conversation format of InternLM2-chat, with the template protocol as:
 
 ```python
