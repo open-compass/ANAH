@@ -8,7 +8,7 @@ The repo contains:
 
 + The [data](#huggingface-dataset) for training and evaluating the LLM which consists of sentence-level hallucination annotations.
 + The [model](#huggingface-model) for annotating the hallucination.
-+ The [code](#evaluation) for evaluating the LLMs' ability to annotate hallucination.
++ The [code](#evaluation) for evaluating the hallucinations level of LLM-generated content and the LLMs' ability to annotate hallucination.
 
 
 ## 🚀 What's New
@@ -60,7 +60,8 @@ The ANAH dataset is available on Huggingface dataset hub.
 | Dataset | Huggingface Repo |
 |---------|------------------|
 | ANAH    | [Dataset Link](https://huggingface.co/datasets/opencompass/anah) |
-| ANAH-v2 | [Will Open Source] |
+
+We also release the topics, questions and reference documents of ANAH-v2, you can find it [here](https://github.com/open-compass/ANAH/blob/main/eval/anah_v2/question_document.jsonl).
 
 <a name="huggingface-model"></a>
 ### Model
@@ -82,14 +83,38 @@ You have to follow the prompt in our paper to annotate the hallucination. Note t
 
 We recommand you to use the more advanced annotator ANAH-v2 and its prompt can be found [here](https://github.com/open-compass/ANAH/blob/main/prompt_v2.py).
 
-The models follow the conversation format of InternLM2-chat, with the template protocol as:
+We also provide some [examples](https://github.com/open-compass/ANAH/blob/main/example) of using the ANAH-v2 annotator, which you can refer to for annotating your content.
 
-```python
-dict(role='user', begin='<|im_start|>user\n', end='<|im_end|>\n'),
-dict(role='assistant', begin='<|im_start|>assistant\n', end='<|im_end|>\n'),
-```
 <a name="evaluation"></a>
-## 🏗️ ️Evaluation
+
+## 🏗️ ️Evaluation for the hallucinations level of LLM-generated content.
+
+ANAH-v2 is a nice hallucination annotator that can be used to assess the level of hallucinations in LLM-generated content.
+
+### 1. Responses Generation
+
+For the models you want to evaluate, collect their responses under some questions. We recommend that you use the questions from the [ANAH-v2 dataset](https://github.com/open-compass/ANAH/blob/main/eval/anah_v2/question_document.jsonl), but you can also use your custom questions. Then, construct your model response file in the following format:
+
+```json
+{"question": "...", "response": "..."}
+{"question": "...", "response": "..."}
+```
+
+
+### 2. Hallucination Score Evaluation
+
+Put the path to the model response file you just got into `{your_model_response_path}`. Then run the following command. You can get the hallucination annotation result in `{your_annotation_result_path}` and the factuality score (higher score means lower level of hallucination) in `{your_evaluation_result_path}`.
+
+```bash
+python -u ./eval/anah_v2/eval.py \
+    --json_path {your_model_response_path} \ 
+    --annotation_path {your_annotation_result_path} \
+    --eval_path {your_evaluation_result_path} \
+```
+
+Note that if you are using the customized questions, you will need to prepare a `question_document` file to be entered as `--document_path`. You can refer to the format of [this file](https://github.com/open-compass/ANAH/blob/main/eval/anah_v2/question_document.jsonl) to organize your file.
+
+## 🏗️ ️Evaluation for LLMs' ability to generate fine-grained hallucination annotation.
 
 ANAH can be used for evaluating the current open-source and close-source LLMs' ability to generate fine-grained hallucination annotation.
 
@@ -114,7 +139,7 @@ We recommend you download the huggingface model to your local path and replace t
 Our evaluations are conducted on NVIDIA A100 GPUs, and OOM may occur on other types of machines.
 
 ```bash
-python -u ./eval/eval.py \
+python -u ./eval/anah_v1/eval.py \
     --model_type {your_model_type} \ 
     --server_addr {your_hf_model_path} \
     --json_path {test_set_path} \
