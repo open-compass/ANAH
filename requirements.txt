@@ -9,3 +9,4 @@ rouge-score==0.1.2
 numpy==1.25.1
 jieba==0.42.1
 bert-score==0.3.13
+lagent==0.2.3
