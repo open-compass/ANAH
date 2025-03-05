@@ -6,7 +6,7 @@ This is the repository for our ANAH series of papers, which aims to reduce hallu
 
 - **[Benchmark]** [ANAH: Analytical Annotation of Hallucinations in Large Language Models](https://arxiv.org/abs/2405.20315)
 - **[Detection]** [ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models](https://arxiv.org/abs/2407.04693)
-- **[Mitigation]** [Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs]()
+- **[Mitigation]** [Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs](http://arxiv.org/abs/2503.02846)
 
 The repo contains:
 
@@ -59,7 +59,7 @@ The final hallucination annotator (detector) with only 7B parameters surpasses t
 
 ## Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs
 
-[![arXiv](https://img.shields.io/badge/arXiv--b31b1b.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2503.02846-b31b1b.svg)](http://arxiv.org/abs/2503.02846)
 
 Mask-DPO is a fine-grained factuality alignment method based on Direct Preference Optimization (DPO).
 
