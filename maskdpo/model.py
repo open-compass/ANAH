@@ -25,22 +25,6 @@ class MaskDPO(DPO):
         all_loss_mask = data[
             'labels'] != -100  # loss mask of all tokens in all sp ranks  # noqa
 
-        labels = data['labels'].clone()
-
-        neg_indices = torch.where((labels < -100000))
-        zero_indices = torch.where((labels == -100) | (labels == 0))
-        pos_indices = torch.where(labels > 0)
-
-        labels[neg_indices] += 1000000
-        labels[zero_indices] = -100
-
-        loss_mask = torch.zeros_like(labels)
-        loss_mask[pos_indices] = 1
-        loss_mask[neg_indices] = -1
-
-        all_loss_mask = loss_mask.clone()
-        data['labels'] = labels
-        
         if get_sequence_parallel_world_size() > 1:
             data = self._split_for_sequence_parallel(data)
 
@@ -54,7 +38,7 @@ class MaskDPO(DPO):
 
         labels = data['labels']
         labels[labels == -100] = 0
-        # loss_mask = labels != 0  # loss mask in a single sp rank
+        loss_mask = labels != 0  # loss mask in a single sp rank
         policy_logps = self._gather_masked_logits(all_logits, labels,
                                                   loss_mask)
         ref_logps = self._gather_masked_logits(all_ref_logits, labels,
