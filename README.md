@@ -229,18 +229,21 @@ ANAH is built with [InternLM](https://github.com/InternLM/InternLM), [Xtuner](ht
 
 If you find this project useful in your research, please consider citing:
 ```
-@article{ji2024anah,
+@inproceedings{ji2024anah,
   title={ANAH: Analytical Annotation of Hallucinations in Large Language Models},
   author={Ji, Ziwei and Gu, Yuzhe and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
-  journal={arXiv preprint arXiv:2405.20315},
+  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={8135--8158},
   year={2024}
 }
 
-@article{gu2024anah,
-  title={ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models},
+@article{gu2025anah,
+  title={Anah-v2: Scaling analytical hallucination annotation of large language models},
   author={Gu, Yuzhe and Ji, Ziwei and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
-  journal={arXiv preprint arXiv:2407.04693},
-  year={2024}
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={60012--60039},
+  year={2025}
 }
 
 @inproceedings{gumask,
