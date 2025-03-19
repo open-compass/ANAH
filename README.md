@@ -246,10 +246,12 @@ If you find this project useful in your research, please consider citing:
   year={2025}
 }
 
-@inproceedings{gumask,
+@inproceedings{gu2025mask,
   title={Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs},
   author={Gu, Yuzhe and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
-  booktitle={The Thirteenth International Conference on Learning Representations}
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=d2H1oTNITn}
 }
 ```
 
