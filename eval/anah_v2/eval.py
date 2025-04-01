@@ -2,10 +2,11 @@ import os
 import argparse
 import csv
 from tqdm import tqdm
+from lmdeploy import TurbomindEngineConfig, pipeline, ChatTemplateConfig
 
 from utils import get_lines_from_path, write_lines_to_path, sentence_tokenize
 from anahv2_prompt import fact_check_prompt, reference_check_prompt, hallucination_check_prompt
-from lmdeploy import TurbomindEngineConfig, pipeline, ChatTemplateConfig
+
 
 def process_question(pipe, question: str, sentence: str, document: str, language: str) -> str:
     """Process the question through multiple steps: fact-checking, reference-checking, hallucination-checking."""
@@ -92,8 +93,8 @@ def run(args):
     lines = get_lines_from_path(args.json_path)
     new_lines = []
     for line in tqdm(lines, desc="processing"):
-        response = line["predictions"]
-        question = line["prompt"][-1]["content"]
+        response = line["response"]
+        question = line["question"]
         language = ref_lines[question]["language"]
         document = ref_lines[question]["document"]
         sentences = sentence_tokenize(response, language, keep_end=False)
