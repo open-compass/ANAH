@@ -110,6 +110,12 @@ We also provide some [examples](https://github.com/open-compass/ANAH/blob/main/e
 
 ANAH-v2 is a nice hallucination annotator that can be used to assess the level of hallucinations in LLM-generated content.
 
+You can install the dependence using:
+
+```bash
+conda env create -f anah-v2-env.yml 
+```
+
 ### 1. Responses Generation
 
 For the models you want to evaluate, collect their responses under some questions. We recommend that you use the questions from the [ANAH-v2 dataset](https://github.com/open-compass/ANAH/blob/main/eval/anah_v2/question_document.jsonl), but you can also use your custom questions. Then, construct your model response file in the following format:
@@ -174,7 +180,7 @@ python -u ./eval/anah_v1/eval.py \
 Mask-DPO utilizes [XTuner](https://github.com/InternLM/xtuner) as the training engine.
 
 ```bash
-conda env create -f maskdpo.yml 
+conda env create -f maskdpo-env.yml 
 ```
 
 ### 2. Prepare Fine-grained Preference Data
