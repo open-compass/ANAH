@@ -159,7 +159,7 @@ def save_checkpoint(checkpoint_path, processed_count):
 
 
 def run(args):
-    model_path = 'anah-v2'
+    model_path = 'opencompass/anah-v2'
     checkpoint_path = f"{args.annotation_path}.checkpoint"
     
     # Load checkpoint if it exists
@@ -313,7 +313,7 @@ def run(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--json_path", type=str, help="Path to input JSON file")
-    parser.add_argument("--document_path", default="question_document.jsonl", type=str, 
+    parser.add_argument("--document_path", default="eval/anah_v2/question_document.jsonl", type=str, 
                         help="Path to document JSON file")
     parser.add_argument("--annotation_path", type=str, help="Path to save annotation results")
     parser.add_argument("--eval_path", type=str, help="Path to save evaluation results")
