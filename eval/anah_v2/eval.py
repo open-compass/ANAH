@@ -120,4 +120,3 @@ if __name__ == "__main__":
         run(args)
 
     evaluate_output(args)
-
