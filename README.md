@@ -243,18 +243,17 @@ If you find this project useful in your research, please consider citing:
   year={2024}
 }
 
-@article{gu2025anah,
-  title={Anah-v2: Scaling analytical hallucination annotation of large language models},
-  author={Gu, Yuzhe and Ji, Ziwei and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
-  journal={Advances in Neural Information Processing Systems},
-  volume={37},
-  pages={60012--60039},
-  year={2025}
+@inproceedings{gu2024anahv,
+  title={{ANAH}-v2: Scaling Analytical Hallucination Annotation of Large Language Models},
+  author={Yuzhe Gu and Ziwei Ji and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+  year={2024},
+  url={https://openreview.net/forum?id=NrwASKGm7A}
 }
 
-@inproceedings{gu2025mask,
-  title={Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs},
-  author={Gu, Yuzhe and Zhang, Wenwei and Lyu, Chengqi and Lin, Dahua and Chen, Kai},
+@inproceedings{gu2025maskdpo,
+  title={Mask-{DPO}: Generalizable Fine-grained Factuality Alignment of {LLM}s},
+  author={Yuzhe Gu and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
   booktitle={The Thirteenth International Conference on Learning Representations},
   year={2025},
   url={https://openreview.net/forum?id=d2H1oTNITn}
